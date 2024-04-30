@@ -10,8 +10,8 @@
 
 void selection_sort(int *array, size_t size)
 {
-	int copyValue_index, min_index;
-	size_t index, i;
+	int copyValue_index;
+	size_t index, i, min_index;
 
 	for (index = 0; index < size; index++)
 	{
@@ -20,11 +20,13 @@ void selection_sort(int *array, size_t size)
 		{
 			if (array[i] < array[min_index])
 				min_index = i;
+			
 		}
 		copyValue_index = array[index];
 		array[index] = array[min_index];
 		array[min_index] = copyValue_index;
-		print_array(array, size);
+		if (min_index != index)
+			print_array(array, size);
 	}
 
 }
