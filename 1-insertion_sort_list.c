@@ -12,6 +12,8 @@ void insertion_sort_list(listint_t **list)
 	listint_t *temp, *new;
 	int step = 0, key, index_node;
 
+	if (list == NULL && *list == NULL)
+		return;
 	temp = *list;
 	while (temp->next)
 	{
