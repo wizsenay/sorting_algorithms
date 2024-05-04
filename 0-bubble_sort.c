@@ -14,6 +14,8 @@ void bubble_sort(int *array, size_t size)
 	int copy_j;
 	size_t l = size - 1;
 
+	if (array == NULL)
+		return;
 	for (i = 0; i < size - 1; i++)
 	{
 		sort_chake = 0;

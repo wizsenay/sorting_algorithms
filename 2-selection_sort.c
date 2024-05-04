@@ -20,7 +20,6 @@ void selection_sort(int *array, size_t size)
 		{
 			if (array[i] < array[min_index])
 				min_index = i;
-			
 		}
 		copyValue_index = array[index];
 		array[index] = array[min_index];
